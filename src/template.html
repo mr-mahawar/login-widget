@@ -1,0 +1,91 @@
+<style>
+  * {
+    /* Colors */
+    --color-01: #393E46;
+    --color-02: #00ADB5;
+    --color-03: #AAD8D3;
+    --color-04: #EEEEEE;
+    --color-05: 0,0,0;
+
+    box-sizing: border-box;
+    text-align: start;
+    color: var(--color-04);
+    font-family: sans-serif;
+  }
+  .login-widget {
+    background-color: var(--color-01);
+    width: 95%;
+    margin: 0 auto;
+    padding: 50px 0;
+    border-radius: 5px;
+    box-shadow: 0 25px 25px rgba(var(--color-05), 0.35);
+  }
+  .field {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0 auto;
+    width: 75%;
+  }
+  .field.last {
+    margin-top: 25px;
+  }
+  label {
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s;
+  }
+  input {
+    color: var(--color-01);
+    background-color: var(--color-04);
+    margin-top: 5px;
+    padding: 10px 15px;
+    font-size: 0.85rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: 0.25s;
+    cursor: pointer;
+  }
+  input:focus {
+    background-color: var(--color-03);
+    box-shadow: 0 0 0 1px var(--color-02);
+    transform: scaleX(1.015);
+  }
+  input:focus ~ label {
+    color: var(--color-02);
+    transform: scaleX(1.015);
+  }
+  button.login {
+    background-color: var(--color-02);
+    display: block;
+    margin: 25px auto 0;
+    padding: 10px;
+    width: 100%;
+    max-width: 125px;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: 0.25s;
+    cursor: pointer;
+  }
+  button.login:hover,
+  button.login:focus-visible {
+    transform: scaleX(1.075);
+    box-shadow: 0 0 0 1px var(--color-04);
+  }
+</style>
+<div class="login-widget">
+  <div class="field">
+    <input type="email" id="email" class="email" autocomplete="off" />
+    <label for="email">Email</label>
+  </div>
+  <div class="field last">
+    <input type="password" id="password" class="password" autocomplete="off" />
+    <label for="password">Password</label>
+  </div>
+  <button class="login">Login</button>
+</div>
